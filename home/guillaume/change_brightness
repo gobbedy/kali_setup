@@ -1,0 +1,32 @@
+#!/bin/bash
+# adapted from https://github.com/Jasioski/dev-config-files/blob/master/config_files/not_in_setup_file/generic_scripts/adjust_brightness.sh
+
+arg=$1
+
+# remove leading + if it's there
+arg=$(echo "${arg}" | sed 's/+//')
+
+# get current brightness
+#read -r curr_brightness < /sys/class/backlight/nv_backlight/brightness
+curr_brightness=$(pkexec /usr/sbin/xfpm-power-backlight-helper --get-brightness)
+
+
+# get max brightness
+max_brightness=$(/usr/sbin/xfpm-power-backlight-helper --get-max-brightness)
+
+# get new brightness level
+new_brightness=$(expr $curr_brightness + ${arg});
+if  (( new_brightness > ${max_brightness} ))
+then
+    new_brightness=${max_brightness}
+    echo >&2 "Max brightness reached"
+fi
+
+if  (( new_brightness < 0 ))
+then
+    new_brightness=0
+    echo >&2 "Min brightness reached"
+fi
+
+# set new brightness
+pkexec /usr/sbin/xfpm-power-backlight-helper --set-brightness ${new_brightness}
