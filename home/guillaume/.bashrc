@@ -13,9 +13,9 @@ fi
 #PATH=.:/home/gobbedy/projects/def-yymao/gobbedy/scripts:/snap/bin:$PATH
 export PATH=.:/snap/bin:$PATH
 export PATH=$PATH:/opt/bin:/opt/sbin
-export PATH=$PATH:/usr/bin:/usr/lib/nsight-compute
-export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
-export CUDA_PATH=/usr
+export PATH=$PATH:/usr/local/cuda-11.1/bin
+export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
+#export CUDA_PATH=/usr
 
 #### Shell
 export HISTSIZE=100000
