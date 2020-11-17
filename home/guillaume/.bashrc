@@ -86,10 +86,12 @@ function diff ()
   fi
 }
 
-function n () 
-{ 
-  nedit "$@" &
-}
+#function n () 
+#{ 
+#  nedit "$@" &
+#}
+alias n='nedit "$@"'
+alias sudo='sudo '
 
 # GIT ALIASES BEGIN HERE
 
