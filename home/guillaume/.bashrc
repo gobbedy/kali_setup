@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
 #export CUDA_PATH=/usr
 
 #### Shell
-export HISTCONTROL=ignoredups
+HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
