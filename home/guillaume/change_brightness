@@ -22,9 +22,9 @@ then
     echo >&2 "Max brightness reached"
 fi
 
-if  (( new_brightness < 0 ))
+if  (( new_brightness < 1 ))
 then
-    new_brightness=0
+    new_brightness=1
     echo >&2 "Min brightness reached"
 fi
 
