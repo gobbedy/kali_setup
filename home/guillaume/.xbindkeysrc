@@ -72,6 +72,12 @@
 "/home/guillaume/change_brightness -1"
     control+shift + p
 
+"/home/guillaume/change_brightness 5"
+    control+shift + o
+
+"/home/guillaume/change_brightness -5"
+    control+shift + i
+
 
 ##################################
 # End of xbindkeys configuration #

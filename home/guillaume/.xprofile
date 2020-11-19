@@ -1,1 +1,2 @@
 xbindkeys
+/usr/bin/nvidia-persistenced --verbose
