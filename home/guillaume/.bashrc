@@ -18,7 +18,10 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
 #export CUDA_PATH=/usr
 
 #### Shell
+export HISTCONTROL=ignoredups
 export HISTSIZE=100000
+export HISTFILESIZE=100000
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # get rid of the git pager
 export GIT_PAGER="cut -c 1-${COLUMNS-80}"
