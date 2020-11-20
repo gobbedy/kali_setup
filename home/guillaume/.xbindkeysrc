@@ -69,7 +69,7 @@
 #"/home/guillaume/change_brightness -5"
 #   XF86MonBrightnessDown
 
-"/home/guillaume/change_brightness -1"
+"/home/guillaume/change_brightness +1"
     control+shift + p
 
 "/home/guillaume/change_brightness 5"
