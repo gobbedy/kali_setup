@@ -95,6 +95,7 @@ function diff ()
 #}
 alias n='nedit "$@"'
 alias sudo='sudo '
+alias grep='grep --color=auto'
 
 # GIT ALIASES BEGIN HERE
 
