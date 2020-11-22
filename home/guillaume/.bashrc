@@ -18,6 +18,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
 #export CUDA_PATH=/usr
 
 #### Shell
+set +H
 HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
